@@ -5,6 +5,7 @@ import DashLayout from "./components/dash/DashLayout";
 import Unauthorized from "./components/auth/Unauthorized";
 import HomePage from "./components/features/home/HomePage";
 import RssPlayground from "./components/features/rss_playground/RssPlayground";
+import CreateFeed from "./components/features/html_to_rss/CreateFeed";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="dash" element={<DashLayout />}>
 
           <Route index element={<HomePage />} />
+          <Route path="html-to-rss" element={<CreateFeed />} />
           <Route path="rss-playground" element={<RssPlayground />} />
           
         </Route>
