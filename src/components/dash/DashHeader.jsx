@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { MdLogout } from "react-icons/md";
 import mwfeedsLogo from '../../assets/img/MWFeeds_SVG.svg'
 
 const DashHeader = () => {
@@ -59,28 +60,29 @@ const DashHeader = () => {
 
                     <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
                         
-                        <li className='ml-10 text-sm hover:border-b'>
+                        <li className='ml-10 text-sm font-bold hover:border-b'>
                             <Link to='/dash'>
                                 Home
                             </Link>
                         </li>
 
-                        <li className='ml-10 text-sm hover:border-b'>
+                        <li className='ml-10 text-sm font-bold hover:border-b'>
                             <Link to='/dash/html-to-rss/create'>
                                 Create Feed
                             </Link>
                         </li>
 
-                        <li className='ml-10 text-sm hover:border-b'>
+                        <li className='ml-10 text-sm font-bold hover:border-b'>
                             <Link to='/dash/rss-playground/create'>
                                 RSS Playground
                             </Link>
                         </li>
 
-                        <li className='ml-10 text-sm hover:border-b'>
-                            <button type='button'>
+                        <li className='relative group ml-10 text-md pt-0.5 font-bold'>
+                            <MdLogout />
+                            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                                 Logout
-                            </button>
+                            </span>
                         </li>
 
                     </ul>
@@ -137,7 +139,7 @@ const DashHeader = () => {
 
                         <div className='border-b border-gray-300 my-4'>
 
-                            <p className='w-[85%] md:w-[90%] py-4'>
+                            <p className='w-[85%] md:w-[90%] py-4 text-[18px] font-mono'>
                                 Time Runs Out
                             </p>
 
@@ -150,26 +152,26 @@ const DashHeader = () => {
                         <ul className='uppercase'>
 
                             <Link to='/dash'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    Home
+                                <li onClick={() => setNav(false)} className='py-4 text-sm font-bold'>
+                                    HOME
                                 </li>
                             </Link>
 
                             <Link to='/dash/html-to-rss/create'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    Create Feed
+                                <li onClick={() => setNav(false)} className='py-4 text-sm font-bold'>
+                                    CREATE FEED
                                 </li>
                             </Link>
                 
                             <Link to='/dash/rss-playground/create'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    RSS Playground
+                                <li onClick={() => setNav(false)} className='py-4 text-sm font-bold'>
+                                    RSS PLAYGROUND
                                 </li>
                             </Link>
 
                             <>
-                                <button type='button' className='py-4 text-sm'>
-                                    Logout
+                                <button type='button' className='py-4 text-sm font-bold'>
+                                    LOGOUT
                                 </button>
                             </>
 

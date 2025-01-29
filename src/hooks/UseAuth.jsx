@@ -1,11 +1,11 @@
 import React from 'react'
 
-const UseAuth = () => {
+const useAuth = () => {
     return (
         <div>
-            UseAuth
+            useAuth
         </div>
     )
 }
 
-export default UseAuth
+export default useAuth
