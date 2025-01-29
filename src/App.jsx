@@ -4,8 +4,10 @@ import Login from "./components/auth/Login";
 import DashLayout from "./components/dash/DashLayout";
 import Unauthorized from "./components/auth/Unauthorized";
 import HomePage from "./components/features/home/HomePage";
-import RssPlayground from "./components/features/rss_playground/RssPlayground";
-import CreateFeed from "./components/features/html_to_rss/CreateFeed";
+import RssPlaygroundCreate from "./components/features/rss_playground/create/RssPlaygroundCreate";
+import HtmltoRssCreate from "./components/features/html_to_rss/create/HtmltoRssCreate";
+import RssPlaygroundEdit from "./components/features/rss_playground/edit/RssPlaygroundCreate";
+import HtmltoRssEdit from "./components/features/html_to_rss/edit/HtmltoRssEdit";
 
 function App() {
   return (
@@ -21,8 +23,16 @@ function App() {
         <Route path="dash" element={<DashLayout />}>
 
           <Route index element={<HomePage />} />
-          <Route path="html-to-rss" element={<CreateFeed />} />
-          <Route path="rss-playground" element={<RssPlayground />} />
+          
+          <Route path="html-to-rss">
+            <Route path="create" element={<HtmltoRssCreate />} />
+            <Route path="edit" element={<HtmltoRssEdit />} />
+          </Route>
+
+          <Route path="rss-playground">
+            <Route path="create" element={<RssPlaygroundCreate />} />
+            <Route path="edit" element={<RssPlaygroundEdit />} />
+          </Route>
           
         </Route>
         {/* Protected Routes End */}
