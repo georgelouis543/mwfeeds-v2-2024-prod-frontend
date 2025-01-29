@@ -41,7 +41,7 @@ const DashHeader = () => {
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
 
                 <div className='flex items-center'> 
-                    <Link to='/'>
+                    <Link to='/dash'>
                         <img
                             src={mwfeedsLogo}
                             alt='/'
@@ -51,7 +51,7 @@ const DashHeader = () => {
                         />   
                     </Link>
                     <h1 className='ml-4 text-2xl font-bold text-black'>
-                        MW Feeds
+                        meltwater feeds
                     </h1>  
                 </div>
 
@@ -60,19 +60,19 @@ const DashHeader = () => {
                     <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
                         
                         <li className='ml-10 text-sm hover:border-b'>
-                            <Link to='/'>
+                            <Link to='/dash'>
                                 Home
                             </Link>
                         </li>
 
                         <li className='ml-10 text-sm hover:border-b'>
-                            <Link to='/createfeed1'>
+                            <Link to='/dash/html-to-rss/create'>
                                 Create Feed
                             </Link>
                         </li>
 
                         <li className='ml-10 text-sm hover:border-b'>
-                            <Link to='/more/more_operations'>
+                            <Link to='/dash/rss-playground/create'>
                                 RSS Playground
                             </Link>
                         </li>
@@ -115,7 +115,7 @@ const DashHeader = () => {
                         <div className='flex w-full items-center justify-between'>
             
                             <div className='flex items-center'> 
-                                <Link to='/'>
+                                <Link to='/dash'>
                                     <img
                                         src={mwfeedsLogo}
                                         width='90'
@@ -124,7 +124,9 @@ const DashHeader = () => {
                                         className='rounded-full'
                                     />
                                 </Link>
-                                <h1 className='ml-4 text-2xl font-bold text-black'>MW Feeds</h1>  
+                                <h1 className='ml-4 text-2xl font-bold text-black'>
+                                    meltwater feeds
+                                </h1>  
                             </div>
 
                             <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
@@ -147,19 +149,19 @@ const DashHeader = () => {
 
                         <ul className='uppercase'>
 
-                            <Link to='/'>
+                            <Link to='/dash'>
                                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                                     Home
                                 </li>
                             </Link>
 
-                            <Link to='/createfeed1'>
+                            <Link to='/dash/html-to-rss/create'>
                                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                                     Create Feed
                                 </li>
                             </Link>
                 
-                            <Link to='/more/more_operations'>
+                            <Link to='/dash/rss-playground/create'>
                                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                                     RSS Playground
                                 </li>
